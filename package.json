@@ -1,61 +1,37 @@
 {
-  "name": "social-network-client",
-  "version": "0.1.0",
-  "license": "ISC",
-  "dependencies": {
-    "autosuggest-highlight": "^3.1.1",
-    "axios": "^0.18.0",
-    "config": "^3.0.1",
-    "dayjs": "^1.8.20",
-    "deck.gl": "^7.1.10",
-    "emoji-mart": "^2.11.1",
-    "final-form": "^4.16.1",
-    "history": "^4.9.0",
-    "jwt-decode": "^2.2.0",
-    "linkifyjs": "^2.1.9",
-    "mapbox-gl": "^1.2.0",
-    "prop-types": "^15.7.2",
-    "react": "^16.8.4",
-    "react-autocomplete-input": "^1.0.12",
-    "react-autosuggest": "^9.4.3",
-    "react-dom": "^16.8.4",
-    "react-final-form": "^6.3.0",
-    "react-image-crop": "^6.0.17",
-    "react-infinite-scroll-component": "^4.5.3",
-    "react-linkify": "^1.0.0-alpha",
-    "react-map-gl": "^5.0.7",
-    "react-map-gl-geocoder": "^2.0.7",
-    "react-redux": "^6.0.1",
-    "react-router": "^4.3.1",
-    "react-router-dom": "^4.3.1",
-    "react-scripts": "2.1.5",
-    "react-scroll": "^1.7.14",
-    "redux": "^4.0.1",
-    "redux-logger": "^3.0.6",
-    "redux-thunk": "^2.3.0",
-    "semantic-ui-react": "^0.86.0",
-    "simple-peer": "^9.6.0",
-    "socket.io-client": "^2.2.0",
-    "throttle-debounce": "^2.1.0",
-    "uuid": "^3.3.3"
-  },
+  "name": "travel-planner",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "GENERATE_SOURCEMAP=false react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "node server/server.js",
+    "develop": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
+    "install": "cd server && npm i && cd ../client && npm i",
+    "build": "cd client && npm run build",
+    "seed": "cd server && npm run seed"
   },
-  "eslintConfig": {
-    "extends": "react-app"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jgray33/travel-planner.git"
   },
-  "proxy": "http://127.0.0.1:5000",
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ],
-  "devDependencies": {
-    "react-test-renderer": "^16.13.1"
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jgray33/travel-planner/issues"
+  },
+  "homepage": "https://github.com/jgray33/travel-planner#readme",
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.1.1",
+    "@fortawesome/free-solid-svg-icons": "^6.1.1",
+    "@fortawesome/react-fontawesome": "^0.1.18",
+    "apollo-client": "^2.6.10",
+    "bcrypt": "^5.0.1",
+    "concurrently": "^7.2.1",
+    "dotenv": "^16.0.1",
+    "jsonwebtoken": "^8.5.1",
+    "jwt-decode": "^3.1.2",
+    "nodemon": "^2.0.16",
+    "react-modal": "^3.15.1"
   }
 }
